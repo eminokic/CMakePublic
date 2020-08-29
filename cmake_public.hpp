@@ -1,6 +1,3 @@
-#ifndef CMAKE_PUBLIC_HPP
-#define CMAKE_PUBLIC_HPP
+#pragma once
 
 int call_cmake_public();
-
-#endif
