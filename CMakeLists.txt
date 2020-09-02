@@ -6,7 +6,7 @@ add_library(${PROJECT_NAME} cmake_public.cpp)
 include(GNUInstallDirs)
 
 #include header file -> CMAKE_CURRENT_SOURCE_DIR
-target_include_directories (${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}>)
+target_include_directories (${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
 
 install(TARGETS ${PROJECT_NAME}
     EXPORT ${PROJECT_NAME}-targets
