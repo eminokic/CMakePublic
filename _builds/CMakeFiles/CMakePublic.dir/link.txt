@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libCMakePublic.a  CMakeFiles/CMakePublic.dir/cmake_public.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libCMakePublic.a

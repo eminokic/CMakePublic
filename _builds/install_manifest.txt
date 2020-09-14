@@ -1,0 +1,3 @@
+/Users/ally/CMaizeExamples/CMakePublic/lib/libCMakePublic.a
+/Users/ally/CMaizeExamples/CMakePublic/lib/CMakePublicConfig.cmake
+/Users/ally/CMaizeExamples/CMakePublic/lib/CMakePublicConfig-noconfig.cmake
