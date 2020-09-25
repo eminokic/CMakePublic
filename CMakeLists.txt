@@ -16,9 +16,14 @@ include(GNUInstallDirs)
 
 #investigate this more!!!!
 target_include_directories (${PROJECT_NAME} PUBLIC 
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  #$<INSTALL_INTERFACE:include/$PROJECT_NAME
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
 )
+
+#set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+#target_include_directories (CMakePublic PUBLIC ${INCLUDE_DIR})
+
+######target_include_directories (CMakePublic PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 #install the target in the install tree
 install(TARGETS ${PROJECT_NAME}
