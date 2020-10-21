@@ -1,12 +1,16 @@
 cmake_minimum_required(VERSION 3.13.4)
 
-SET(CMAKE_INSTALL_PREFIX /Users/ally/CMaizeExamples/CMakePublic)
+SET(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR})
 
 project(CMakePublic VERSION 1.0.0 LANGUAGES CXX)
 
 add_library(${PROJECT_NAME} SHARED cmake_public.cpp)
 
 include(GNUInstallDirs)
+
+set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/cmake_public.hpp
+)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>
@@ -24,7 +28,7 @@ install(TARGETS ${PROJECT_NAME}
 install(EXPORT ${PROJECT_NAME}-targets
     NAMESPACE ${PROJECT_NAME}::
     FILE ${PROJECT_NAME}Config.cmake
-    DESTINATION ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}/cmake
 )
 
 message("CMAKEPUBLIC......................................................................")
