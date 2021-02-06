@@ -4,7 +4,7 @@ SET(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR})
 
 project(CMakePublic VERSION 1.0.0 LANGUAGES CXX)
 
-add_library(${PROJECT_NAME} SHARED cmake_public.cpp)
+add_library(${PROJECT_NAME} SHARED ${CMAKE_CURRENT_SOURCE_DIR}/src/cmake_public.cpp)
 
 include(GNUInstallDirs)
 
