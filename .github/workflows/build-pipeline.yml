@@ -37,6 +37,9 @@ jobs:
       
       # Installing cmake
       - name: Build CMake
-        run: cmake ..
+        run: |
+          mkdir build
+          cd build
+          cmake ..
         
         
