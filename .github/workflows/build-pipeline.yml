@@ -34,3 +34,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      
+      # Installing cmake
+      - name: Build CMake
+        run: |
+          mkdir build,
+          cd build,
+          cmake ...
+        
+        
