@@ -40,9 +40,9 @@ jobs:
           make
       
 # Pulling the CMake-Lint repo as a hook.
-repos:
-- repo: https://github.com/cmake-lint/cmake-lint
-    hooks:
-      - id: cmakelint
+
+      - repo: https://github.com/cmake-lint/cmake-lint
+        hooks:
+          - id: cmakelint
         
         
