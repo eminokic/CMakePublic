@@ -38,11 +38,4 @@ jobs:
           cd build
           cmake ..
           make
-      
-# Pulling the CMake-Lint repo as a hook.
-
-      - repo: https://github.com/cmake-lint/cmake-lint
-        hooks:
-          - id: cmakelint
-        
         
