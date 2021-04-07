@@ -34,7 +34,11 @@ jobs:
           
       # Running the Make Command on CMakePublic
       - name: Make Project
-        run: make
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          make
       
         
         
