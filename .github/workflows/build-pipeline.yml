@@ -28,13 +28,13 @@ jobs:
       # Installing cmake
       - name: Build CMake
         run: |
+          mkdir build
           cd build
           cmake ..
           
       # Running the Make Command on CMakePublic
       - name: Make Project
         run: |
-          mkdir build
           cd build
           cmake ..
           make
