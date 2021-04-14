@@ -25,6 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
+      # Installing cmake-lang dependency
+      - name: Install cmake-lang
+        run: |
+          pip install cmakelang
+          
       # Installing cmake
       - name: Build CMake
         run: |
