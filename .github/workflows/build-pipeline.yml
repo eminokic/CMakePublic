@@ -32,6 +32,11 @@ jobs:
         run: |
           pip install cmakelang
           
+      # Running cmake-format command
+      - name: Install cmake-lang
+        run: |
+          cmake-format
+          
       # Installing cmake
       - name: Build CMake
         run: |
