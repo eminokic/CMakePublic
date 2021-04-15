@@ -33,7 +33,7 @@ jobs:
           pip install cmakelang
           
       # Running cmake-format command
-      - name: Install cmake-lang
+      - name: CMake-Formatting
         run: |
           cmake-format
           
