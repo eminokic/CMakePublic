@@ -30,7 +30,7 @@ jobs:
       # Cloning Main Repository
       - name: Clone Main Repository
         run: |
-          git clone git@github.com:CMaizeExamples/CMakePublic.git
+          git clone git@github.com:CMaizeExamples/CMakePublic CMakePublic
       
       # Installing cmake-lang dependency
       - name: Install cmake-lang
