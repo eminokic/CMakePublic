@@ -25,12 +25,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      
-      # Cloning Main Repository
-      - name: Clone Main Repository
-        run: |
-          git clone git@github.com:CMaizeExamples/CMakePublic CMakePublic
+      - name: Git Checkout CMakePublic
+        uses: actions/checkout@v2
       
       # Installing cmake-lang dependency
       - name: Install cmake-lang
