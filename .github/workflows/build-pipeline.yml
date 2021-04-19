@@ -27,16 +27,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Git Checkout CMakePublic
         uses: actions/checkout@v2
-      
-      # Installing cmake-lang dependency
-      - name: Install cmake-lang
-        run: |
-          pip install cmakelang
-          
-      # Running cmake-format command
-      - name: CMake-Formatting
-        run: |
-          cmake-format
           
       # Installing cmake
       - name: Build CMake
@@ -51,4 +41,13 @@ jobs:
           cd build
           cmake ..
           make
-        
+
+      # Installing cmake-lang dependency
+      - name: Install cmake-lang
+        run: |
+          pip install cmakelang
+          
+      # Running cmake-format command
+      - name: CMake-Formatting
+        run: |
+          cmake-format
